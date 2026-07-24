@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manoela Floresti — Psicóloga | Psicoterapia online | CRP 06/165889</title>
-<meta name="description" content="Psicoterapia online com Manoela Floresti, psicóloga clínica orientada pela Psicanálise. Um espaço de escuta acolhedor e livre de julgamentos. Agende sua sessão.">
+<title>Manoela Floresti — Psicóloga em Marília | Presencial e Online | CRP 06/165889</title>
+<meta name="description" content="Psicóloga clínica orientada pela Psicanálise. Atendimento presencial em Marília-SP e online para todo o Brasil. Um espaço de escuta acolhedor e livre de julgamentos.">
+<meta property="og:title" content="Manoela Floresti — Psicóloga | Presencial em Marília e Online">
+<meta property="og:description" content="Um espaço de escuta acolhedor e livre de julgamentos. Psicanálise, presencial em Marília-SP e online para todo o Brasil.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
@@ -41,10 +44,10 @@ header{
   backdrop-filter:blur(8px);
   border-bottom:1px solid rgba(47,74,62,.08);
 }
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.brand{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--forest);text-decoration:none}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.brand{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--forest);text-decoration:none;flex:none}
 .brand small{display:block;font-family:'Karla',sans-serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
-.nav .btn{padding:10px 20px;font-size:.9rem}
+.nav .btn{padding:10px 20px;font-size:.9rem;white-space:nowrap}
 
 /* buttons */
 .btn{
@@ -173,6 +176,58 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:16px;max-width:22em}
   padding:7px 16px;border-radius:999px;
 }
 
+/* contato + mapa */
+.contato-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:stretch}
+.info-list{list-style:none;display:grid;gap:14px;margin-bottom:26px}
+.info-list li{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--white);padding:18px 20px;border-radius:16px;
+  border:1px solid rgba(47,74,62,.07);
+}
+.info-list .ico{
+  flex:none;width:38px;height:38px;border-radius:50%;
+  background:var(--marigold-soft);display:grid;place-items:center;
+}
+.info-list .ico svg{width:19px;height:19px;fill:var(--forest)}
+.info-list strong{display:block;color:var(--forest);font-size:.95rem;margin-bottom:2px}
+.info-list span{font-size:.94rem;color:var(--ink-soft)}
+.info-list a{color:var(--ink-soft);text-decoration:none}
+.info-list a:hover{color:var(--forest);text-decoration:underline}
+.horarios{font-size:.94rem;color:var(--ink-soft);line-height:1.9}
+.horarios b{color:var(--forest)}
+.map-frame{
+  border-radius:var(--radius);overflow:hidden;min-height:400px;
+  border:1px solid rgba(47,74,62,.1);
+  box-shadow:0 10px 28px rgba(47,74,62,.12);
+}
+.map-frame iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+
+/* faq */
+.faq{display:grid;gap:12px;max-width:820px}
+.faq details{
+  background:var(--white);border-radius:16px;
+  border:1px solid rgba(47,74,62,.09);
+  overflow:hidden;
+}
+.faq summary{
+  list-style:none;cursor:pointer;
+  padding:20px 54px 20px 24px;position:relative;
+  font-weight:700;color:var(--forest);font-size:1.02rem;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";position:absolute;right:24px;top:50%;
+  width:9px;height:9px;margin-top:-6px;
+  border-right:2px solid var(--marigold);
+  border-bottom:2px solid var(--marigold);
+  transform:rotate(45deg);
+  transition:transform .2s ease;
+}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+.faq summary:hover{background:var(--sage)}
+.faq summary:focus-visible{outline:3px solid var(--forest);outline-offset:-3px}
+.faq .answer{padding:0 24px 22px;color:var(--ink-soft);font-size:.97rem}
+
 /* quote */
 .quote{background:var(--forest);text-align:center;padding:84px 0}
 .quote blockquote{
@@ -189,7 +244,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:16px;max-width:22em}
 .final .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 /* footer */
-footer{background:var(--sage);padding:34px 0;text-align:center;font-size:.9rem;color:var(--ink-soft)}
+footer{background:var(--sage);padding:34px 0 90px;text-align:center;font-size:.9rem;color:var(--ink-soft)}
 footer a{color:var(--forest);font-weight:700;text-decoration:none}
 footer .social{display:flex;gap:18px;justify-content:center;margin-bottom:14px}
 footer .social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--white);box-shadow:0 4px 12px rgba(47,74,62,.1)}
@@ -215,9 +270,22 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
   .hero{padding:44px 0 60px}
   .photo-arch{order:-1}
   .cards,.steps{grid-template-columns:1fr}
-  .offer-grid,.about-grid{grid-template-columns:1fr}
+  .offer-grid,.about-grid,.contato-grid{grid-template-columns:1fr}
   .about-photo{max-width:340px;margin:0 auto}
   section{padding:56px 0}
+}
+@media (max-width:560px){
+  .wrap{padding:0 18px}
+  .nav{gap:10px}
+  .brand{font-size:1rem;line-height:1.25}
+  .brand small{font-size:.62rem;letter-spacing:.08em}
+  .nav .btn{padding:9px 15px;font-size:.8rem}
+  .hero{padding-bottom:48px}
+  .photo-arch{width:min(300px,86%)}
+  .photo-arch::before{width:74px;height:74px;inset:-8px -8px auto auto}
+  .final .cta-row .btn,.hero .cta-row .btn{width:100%;justify-content:center}
+  .wa-float{right:16px;bottom:16px;width:54px;height:54px}
+  .offer-side{padding:32px 24px}
 }
 </style>
 </head>
@@ -233,7 +301,7 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
 <section class="hero" id="inicio">
   <div class="wrap">
     <div>
-      <span class="eyebrow">Psicoterapia online · Psicanálise</span>
+      <span class="eyebrow">Presencial em Marília · Online para todo o Brasil</span>
       <h1>Um espaço de escuta para o que você <em>carrega</em> — sem julgamentos.</h1>
       <p>Às vezes a gente sente que algo se repete, aperta ou confunde — e tentar resolver sozinho parece não bastar.</p>
       <p>A análise é um convite para falar livremente, se escutar de verdade e compreender o que se move por trás das suas questões.</p>
@@ -293,7 +361,7 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
     <span class="kicker">Como funciona</span>
     <h2>Começar é mais simples do que parece</h2>
     <div class="steps">
-      <div class="step"><h3>Primeiro contato</h3><p>Você me chama no WhatsApp, tira suas dúvidas e combinamos o melhor horário — tudo online, de onde você estiver.</p></div>
+      <div class="step"><h3>Primeiro contato</h3><p>Você me chama no WhatsApp, tira suas dúvidas e combinamos o melhor horário — presencial em Marília ou online, como preferir.</p></div>
       <div class="step"><h3>Primeiras conversas</h3><p>Nas sessões iniciais, acolho a sua história e o que te trouxe até aqui, sem pressa e sem julgamentos.</p></div>
       <div class="step"><h3>Seu processo, no seu ritmo</h3><p>Seguimos juntos em sessões regulares, construindo um espaço de escuta que respeita o seu tempo.</p></div>
     </div>
@@ -309,15 +377,92 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
       <span class="kicker">Sobre mim</span>
       <h2>Olá, seja bem-vindo! Eu sou a Manoela.</h2>
       <p>Sou psicóloga clínica orientada pela <strong>Psicanálise</strong>, moro em Marília, interior do estado de São Paulo. Com formação contínua em Psicanálise e Psicopatologia, dedico-me a ajudar você a explorar suas emoções, compreender padrões e encontrar estratégias para lidar com os desafios da vida.</p>
-      <p>Ofereço atendimentos online, sempre pautados pela ética psicanalítica, com o compromisso de proporcionar um ambiente livre de julgamentos.</p>
+      <p>Atendo <strong>presencialmente em Marília</strong> e <strong>online para todo o Brasil</strong>, sempre pautada pela ética psicanalítica, com o compromisso de proporcionar um ambiente livre de julgamentos.</p>
       <p><strong>Vamos iniciar essa jornada? Estou aqui para seguirmos juntos!</strong></p>
       <div class="tags">
+        <span class="tag">Presencial em Marília</span>
         <span class="tag">Atendimento online</span>
         <span class="tag">Psicanálise</span>
         <span class="tag">Psicopatologia</span>
         <span class="tag">CRP 06/165889</span>
       </div>
       <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">Vamos conversar?</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <span class="kicker">Dúvidas frequentes</span>
+    <h2>Perguntas que costumam aparecer</h2>
+    <p class="lead">Se a sua dúvida não estiver aqui, é só me chamar no WhatsApp — respondo com prazer.</p>
+    <div class="faq">
+
+      <details>
+        <summary>Posso fazer terapia quinzenal?</summary>
+        <div class="answer">Para o sucesso do tratamento, é essencial que no início as consultas sejam feitas toda semana. Com o tempo e à medida que os resultados desejados são alcançados, iniciamos o processo de alta terapêutica. As consultas, então são espaçadas para quinzenais, mensais, até o encerramento do processo.</div>
+      </details>
+
+      <details>
+        <summary>É fundamental ter privacidade na terapia?</summary>
+        <div class="answer">Sim. É muito importante que você esteja num ambiente sozinho(a), sem preocupações de ser interrompido(a) e, de preferência, com fone de ouvido para maior privacidade.<br><br>É dentro desse espaço confidencial que você se sente seguro(a) para compartilhar seus pensamentos, sentimentos e experiências mais íntimas, sem medo de julgamentos. Essa segurança é essencial para que o processo terapêutico seja eficaz.</div>
+      </details>
+
+      <details>
+        <summary>Qual é o tempo de sessão? E qual a frequência?</summary>
+        <div class="answer">Ofereço ampla disponibilidade de horários, geralmente atendendo das 8h às 20h, de segunda a sexta-feira. Cada sessão tem duração de 50 minutos, com frequência de uma vez por semana.</div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-sage" id="contato">
+  <div class="wrap">
+    <span class="kicker">Onde me encontrar</span>
+    <h2>Agende sua sessão presencial ou online</h2>
+    <p class="lead">Atendimento presencial no centro de Marília e online para todo o Brasil. Escolha o formato que fizer mais sentido para você.</p>
+    <div class="contato-grid">
+      <div>
+        <ul class="info-list">
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span>
+            <div>
+              <strong>Consultório</strong>
+              <a href="https://www.google.com/maps/search/?api=1&query=R.+Bahia,+165+-+Centro,+Mar%C3%ADlia+-+SP,+17501-080" target="_blank" rel="noopener">R. Bahia, 165 — Sala 14, 1º andar<br>Centro, Marília — SP · 17501-080</a>
+            </div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6V6h-2v7.4l5.2 3.1 1-1.7-4.2-2.2z"/></svg></span>
+            <div>
+              <strong>Horários</strong>
+              <div class="horarios">
+                <b>Segunda a sexta</b> · 08h às 20h<br>
+                <b>Sábado e domingo</b> · Fechado
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg></span>
+            <div>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">(14) 99153-1484</a>
+            </div>
+          </li>
+        </ul>
+        <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
+          Agendar sessão
+        </a>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=R.%20Bahia%2C%20165%20-%20Centro%2C%20Mar%C3%ADlia%20-%20SP%2C%2017501-080&t=m&z=16&output=embed&iwloc=near"
+          title="Localização do consultório: R. Bahia, 165, Centro, Marília - SP"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -353,7 +498,7 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
         <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.3-.3.8-.3 1.8-.1 1.3-.1 1.6-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.5.4.8.7 1.1.3.3.6.5 1.1.7.3.1.8.3 1.8.3 1.3.1 1.6.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.3.3-.8.3-1.8.1-1.3.1-1.6.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.3-.1-.8-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg>
       </a>
     </div>
-    <p>©2026 Manoela Floresti · Psicóloga · CRP 06/165889 · Atendimento online</p>
+    <p>©2026 Manoela Floresti · Psicóloga · CRP 06/165889<br>R. Bahia, 165 — Sala 14, Centro, Marília-SP · Atendimento presencial e online</p>
   </div>
 </footer>
 
