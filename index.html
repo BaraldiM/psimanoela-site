@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manoela Floresti — Psicóloga | Psicoterapia online | CRP 06/165889</title>
+<meta name="description" content="Psicoterapia online com Manoela Floresti, psicóloga clínica orientada pela Psicanálise. Um espaço de escuta acolhedor e livre de julgamentos. Agende sua sessão.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FFFBF4;
+  --sage:#EAF1E6;
+  --forest:#2F4A3E;
+  --marigold:#F0A542;
+  --marigold-soft:#FBEBD2;
+  --ink:#35322C;
+  --ink-soft:#6B675E;
+  --white:#FFFFFF;
+  --radius:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Karla',sans-serif;
+  background:var(--ivory);
+  color:var(--ink);
+  line-height:1.65;
+  font-size:17px;
+}
+h1,h2,h3{font-family:'Fraunces',serif;color:var(--forest);font-weight:500;line-height:1.2}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,251,244,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(47,74,62,.08);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--forest);text-decoration:none}
+.brand small{display:block;font-family:'Karla',sans-serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+.nav .btn{padding:10px 20px;font-size:.9rem}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--marigold);color:var(--forest);
+  font-weight:700;text-decoration:none;
+  padding:15px 30px;border-radius:999px;
+  transition:transform .15s ease, box-shadow .15s ease;
+  box-shadow:0 4px 14px rgba(240,165,66,.35);
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(240,165,66,.45)}
+.btn:focus-visible{outline:3px solid var(--forest);outline-offset:3px}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.ghost{
+  background:transparent;box-shadow:none;
+  border:2px solid var(--forest);color:var(--forest);font-weight:700;
+}
+.btn.ghost:hover{background:var(--forest);color:var(--ivory)}
+
+/* hero */
+.hero{padding:64px 0 80px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.eyebrow{
+  display:inline-block;background:var(--sage);color:var(--forest);
+  font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:7px 16px;border-radius:999px;margin-bottom:22px;
+}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--marigold);}
+.hero p{font-size:1.1rem;color:var(--ink-soft);max-width:32em;margin-bottom:14px}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.photo-arch{
+  position:relative;
+  width:min(360px,100%);
+  margin:0 auto;
+}
+.photo-arch img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 22%;
+  border-radius:180px 180px var(--radius) var(--radius);
+  box-shadow:0 18px 40px rgba(47,74,62,.18);
+}
+.photo-arch::before{
+  content:"";position:absolute;inset:-14px -14px auto auto;
+  width:92px;height:92px;z-index:-1;
+  background:radial-gradient(circle at center,var(--marigold) 26%,transparent 27%),
+    repeating-conic-gradient(var(--marigold) 0 6deg,transparent 6deg 30deg);
+  border-radius:50%;
+  opacity:.85;
+}
+.credencial{
+  position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
+  background:var(--white);padding:8px 18px;border-radius:999px;
+  font-size:.8rem;font-weight:700;color:var(--forest);white-space:nowrap;
+  box-shadow:0 6px 16px rgba(47,74,62,.15);
+}
+
+/* wavy divider */
+.wave{display:block;width:100%;height:44px}
+
+/* sections */
+section{padding:72px 0}
+.section-sage{background:var(--sage)}
+.kicker{
+  font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--marigold);display:block;margin-bottom:10px;
+}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:16px;max-width:22em}
+.lead{color:var(--ink-soft);max-width:38em;margin-bottom:36px}
+
+/* pain cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:var(--white);border-radius:var(--radius);
+  padding:26px 24px;
+  border:1px solid rgba(47,74,62,.07);
+  box-shadow:0 4px 14px rgba(47,74,62,.05);
+}
+.card h3{font-size:1.08rem;margin-bottom:6px}
+.card p{font-size:.94rem;color:var(--ink-soft)}
+.cards + .after{margin-top:34px;font-size:1.12rem;text-align:center}
+.after strong{color:var(--forest)}
+
+/* offers list */
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.offer-list{list-style:none;display:grid;gap:16px}
+.offer-list li{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--white);padding:18px 20px;border-radius:16px;
+  border:1px solid rgba(47,74,62,.07);
+}
+.offer-list .dot{
+  flex:none;width:34px;height:34px;border-radius:50%;
+  background:var(--marigold-soft);color:var(--forest);
+  display:grid;place-items:center;font-weight:700;font-family:'Fraunces',serif;
+}
+.offer-side{background:var(--forest);color:var(--ivory);border-radius:var(--radius);padding:40px 34px}
+.offer-side h3{color:var(--ivory);font-size:1.5rem;margin-bottom:14px}
+.offer-side p{color:rgba(255,251,244,.85);margin-bottom:24px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+.step{
+  background:var(--white);border-radius:var(--radius);padding:30px 26px;
+  border:1px solid rgba(47,74,62,.07);position:relative;
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  font-family:'Fraunces',serif;font-size:2.2rem;color:var(--marigold);
+  display:block;margin-bottom:10px;
+}
+.step h3{font-size:1.1rem;margin-bottom:8px}
+.step p{font-size:.95rem;color:var(--ink-soft)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:center}
+.about-photo img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;
+  border-radius:var(--radius);
+  box-shadow:0 14px 34px rgba(47,74,62,.16);
+}
+.about-text p{margin-bottom:16px;color:var(--ink-soft)}
+.about-text p strong{color:var(--forest)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px}
+.tag{
+  background:var(--sage);color:var(--forest);font-size:.85rem;font-weight:700;
+  padding:7px 16px;border-radius:999px;
+}
+
+/* quote */
+.quote{background:var(--forest);text-align:center;padding:84px 0}
+.quote blockquote{
+  font-family:'Fraunces',serif;font-style:italic;
+  font-size:clamp(1.4rem,3vw,2rem);color:var(--ivory);
+  max-width:22em;margin:0 auto 18px;line-height:1.4;
+}
+.quote cite{color:var(--marigold);font-style:normal;font-weight:700;font-size:.95rem;letter-spacing:.08em}
+
+/* final cta */
+.final{text-align:center;padding:90px 0}
+.final h2{margin:0 auto 16px}
+.final p{max-width:34em;margin:0 auto 32px;color:var(--ink-soft)}
+.final .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* footer */
+footer{background:var(--sage);padding:34px 0;text-align:center;font-size:.9rem;color:var(--ink-soft)}
+footer a{color:var(--forest);font-weight:700;text-decoration:none}
+footer .social{display:flex;gap:18px;justify-content:center;margin-bottom:14px}
+footer .social a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--white);box-shadow:0 4px 12px rgba(47,74,62,.1)}
+footer .social svg{width:22px;height:22px;fill:var(--forest)}
+
+/* floating whatsapp */
+.wa-float{
+  position:fixed;right:22px;bottom:22px;z-index:60;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;display:grid;place-items:center;
+  box-shadow:0 8px 22px rgba(37,211,102,.45);
+  transition:transform .15s ease;
+}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.wa-float{transition:none}
+}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .hero{padding:44px 0 60px}
+  .photo-arch{order:-1}
+  .cards,.steps{grid-template-columns:1fr}
+  .offer-grid,.about-grid{grid-template-columns:1fr}
+  .about-photo{max-width:340px;margin:0 auto}
+  section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio">Manoela Floresti<small>Psicóloga · CRP 06/165889</small></a>
+    <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">Agendar sessão</a>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Psicoterapia online · Psicanálise</span>
+      <h1>Um espaço de escuta para o que você <em>carrega</em> — sem julgamentos.</h1>
+      <p>Às vezes a gente sente que algo se repete, aperta ou confunde — e tentar resolver sozinho parece não bastar.</p>
+      <p>A análise é um convite para falar livremente, se escutar de verdade e compreender o que se move por trás das suas questões.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
+          Vamos conversar?
+        </a>
+        <a class="btn ghost" href="https://www.instagram.com/psimanoelafloresti/" target="_blank" rel="noopener">@psimanoelafloresti</a>
+      </div>
+    </div>
+    <div class="photo-arch">
+      <img src="manoela-hero.jpg" alt="Manoela Floresti, psicóloga clínica">
+      <span class="credencial">Psicóloga · CRP 06/165889</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-sage">
+  <div class="wrap">
+    <span class="kicker">Talvez você se reconheça</span>
+    <h2>Você pode estar sentindo…</h2>
+    <div class="cards">
+      <div class="card"><h3>Angústia que não passa</h3><p>Uma inquietação constante, difícil de nomear, que acompanha seus dias.</p></div>
+      <div class="card"><h3>Padrões que se repetem</h3><p>Situações e relações que parecem sempre terminar no mesmo lugar.</p></div>
+      <div class="card"><h3>Ansiedade e pensamentos acelerados</h3><p>A mente que não desliga e o corpo que sente o peso disso.</p></div>
+      <div class="card"><h3>Dificuldade nos relacionamentos</h3><p>Insegurança, medo de rejeição ou conflitos que se acumulam.</p></div>
+      <div class="card"><h3>Tristeza ou vazio</h3><p>A sensação de estar desconectado de si e do que antes fazia sentido.</p></div>
+      <div class="card"><h3>Decisões difíceis</h3><p>Encruzilhadas da vida em que é difícil escutar o que você realmente quer.</p></div>
+    </div>
+    <p class="after">E mesmo tentando dar conta de tudo sozinho(a), <strong>algo continua pedindo escuta.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap offer-grid">
+    <div>
+      <span class="kicker">Por que análise?</span>
+      <h2>Um lugar para falar livremente — e se escutar</h2>
+      <ul class="offer-list">
+        <li><span class="dot">✦</span><div><strong>Explorar suas emoções</strong> com liberdade, no seu tempo e do seu jeito.</div></li>
+        <li><span class="dot">✦</span><div><strong>Compreender padrões</strong> que se repetem na sua história e nas suas relações.</div></li>
+        <li><span class="dot">✦</span><div><strong>Dar nome ao que angustia</strong> — porque o que ganha palavra pesa menos.</div></li>
+        <li><span class="dot">✦</span><div><strong>Encontrar seus próprios caminhos</strong> para lidar com os desafios da vida.</div></li>
+      </ul>
+    </div>
+    <div class="offer-side">
+      <h3>Sigilo, ética e acolhimento</h3>
+      <p>Os atendimentos são sempre pautados pela ética psicanalítica, em um ambiente livre de julgamentos, onde você pode se sentir à vontade para compartilhar suas questões mais profundas.</p>
+      <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">Agendar sessão</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-sage">
+  <div class="wrap">
+    <span class="kicker">Como funciona</span>
+    <h2>Começar é mais simples do que parece</h2>
+    <div class="steps">
+      <div class="step"><h3>Primeiro contato</h3><p>Você me chama no WhatsApp, tira suas dúvidas e combinamos o melhor horário — tudo online, de onde você estiver.</p></div>
+      <div class="step"><h3>Primeiras conversas</h3><p>Nas sessões iniciais, acolho a sua história e o que te trouxe até aqui, sem pressa e sem julgamentos.</p></div>
+      <div class="step"><h3>Seu processo, no seu ritmo</h3><p>Seguimos juntos em sessões regulares, construindo um espaço de escuta que respeita o seu tempo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="manoela-sobre.jpg" onerror="this.onerror=null;this.src='https://static.wixstatic.com/media/0404b6_65fcebf350164c9caa924e0761247817~mv2.jpeg/v1/fill/w_485,h_683,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a.jpeg'" alt="Manoela Floresti">
+    </div>
+    <div class="about-text">
+      <span class="kicker">Sobre mim</span>
+      <h2>Olá, seja bem-vindo! Eu sou a Manoela.</h2>
+      <p>Sou psicóloga clínica orientada pela <strong>Psicanálise</strong>, moro em Marília, interior do estado de São Paulo. Com formação contínua em Psicanálise e Psicopatologia, dedico-me a ajudar você a explorar suas emoções, compreender padrões e encontrar estratégias para lidar com os desafios da vida.</p>
+      <p>Ofereço atendimentos online, sempre pautados pela ética psicanalítica, com o compromisso de proporcionar um ambiente livre de julgamentos.</p>
+      <p><strong>Vamos iniciar essa jornada? Estou aqui para seguirmos juntos!</strong></p>
+      <div class="tags">
+        <span class="tag">Atendimento online</span>
+        <span class="tag">Psicanálise</span>
+        <span class="tag">Psicopatologia</span>
+        <span class="tag">CRP 06/165889</span>
+      </div>
+      <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">Vamos conversar?</a>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="wrap">
+    <blockquote>“Qual é sua responsabilidade na desordem da qual você se queixa?”</blockquote>
+    <cite>— Sigmund Freud</cite>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Dar o primeiro passo já é começar.</h2>
+    <p>Você não precisa chegar com tudo resolvido — nem saber por onde começar. É só chamar, e a gente segue juntos a partir daí.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a class="btn ghost" href="https://www.instagram.com/psimanoelafloresti/" target="_blank" rel="noopener">Me acompanhe no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="social">
+      <a href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/psimanoelafloresti/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.3-.3.8-.3 1.8-.1 1.3-.1 1.6-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.5.4.8.7 1.1.3.3.6.5 1.1.7.3.1.8.3 1.8.3 1.3.1 1.6.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.3.3-.8.3-1.8.1-1.3.1-1.6.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.3-.1-.8-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg>
+      </a>
+    </div>
+    <p>©2026 Manoela Floresti · Psicóloga · CRP 06/165889 · Atendimento online</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
+</a>
+
+</body>
+</html>
