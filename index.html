@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manoela Floresti — Psicóloga em Marília | Presencial e Online | CRP 06/165889</title>
-<meta name="description" content="Psicóloga clínica orientada pela Psicanálise. Atendimento presencial em Marília-SP e online para todo o Brasil. Um espaço de escuta acolhedor e livre de julgamentos.">
+<meta name="description" content="Psicóloga clínica orientada pela Psicanálise. Atendimento presencial em Marília-SP e online em todos os lugares. Um espaço de escuta acolhedor e livre de julgamentos.">
 <meta property="og:title" content="Manoela Floresti — Psicóloga | Presencial em Marília e Online">
-<meta property="og:description" content="Um espaço de escuta acolhedor e livre de julgamentos. Psicanálise, presencial em Marília-SP e online para todo o Brasil.">
+<meta property="og:description" content="Um espaço de escuta acolhedor e livre de julgamentos. Psicanálise, presencial em Marília-SP e online em todos os lugares.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -176,6 +176,25 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:16px;max-width:22em}
   padding:7px 16px;border-radius:999px;
 }
 
+/* ⬇️ NOVA SEÇÃO DE ESTILOS PARA A GALERIA DE FOTOS ⬇️ */
+.consultorio-galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas */
+  gap: 24px; /* Espaço entre as fotos */
+  margin-top: 40px;
+}
+
+.consultorio-galeria img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3; /* Mantém a proporção das fotos padrão */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  border-radius: var(--radius); /* Usa o arredondamento padrão do seu site */
+  border: 1px solid rgba(47,74,62,.08); /* Borda suave como nos cards */
+  box-shadow: 0 10px 28px rgba(47,74,62,.12); /* Sombra suave */
+}
+/* ⬆️ FIM DOS NOVOS ESTILOS ⬆️ */
+
 /* contato + mapa */
 .contato-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:stretch}
 .info-list{list-style:none;display:grid;gap:14px;margin-bottom:26px}
@@ -239,7 +258,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:16px;max-width:22em}
 
 /* final cta */
 .final{text-align:center;padding:90px 0}
-.final h2{margin:0 auto 16px}
+.final h2{margin:0 auto 166px}
 .final p{max-width:34em;margin:0 auto 32px;color:var(--ink-soft)}
 .final .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
@@ -271,6 +290,10 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
   .photo-arch{order:-1}
   .cards,.steps{grid-template-columns:1fr}
   .offer-grid,.about-grid,.contato-grid{grid-template-columns:1fr}
+  
+  /* Ajuste para a galeria em tablets/celulares */
+  .consultorio-galeria { grid-template-columns: 1fr; gap: 16px; }
+
   .about-photo{max-width:340px;margin:0 auto}
   section{padding:56px 0}
 }
@@ -301,9 +324,9 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
 <section class="hero" id="inicio">
   <div class="wrap">
     <div>
-      <span class="eyebrow">Presencial em Marília · Online para todo o Brasil</span>
+      <span class="eyebrow">Presencial em Marília · Online em todos os lugares</span>
       <h1>Um espaço de escuta para o que você <em>carrega</em> — sem julgamentos.</h1>
-      <p>Às vezes a gente sente que algo se repete, aperta ou confunde — e tentar resolver sozinho parece não bastar.</p>
+      <p>Há momentos em que algo se repete, aperta ou confunde…e lidar com isso sozinho já não parece suficiente. A análise é um convite: falar livremente, se escutar com mais profundidade e se aproximar do que, muitas vezes, ainda não tem palavras — mas insiste em se fazer sentir.</p>
       <p>A análise é um convite para falar livremente, se escutar de verdade e compreender o que se move por trás das suas questões.</p>
       <div class="cta-row">
         <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">
@@ -325,12 +348,12 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
     <span class="kicker">Talvez você se reconheça</span>
     <h2>Você pode estar sentindo…</h2>
     <div class="cards">
-      <div class="card"><h3>Angústia que não passa</h3><p>Uma inquietação constante, difícil de nomear, que acompanha seus dias.</p></div>
-      <div class="card"><h3>Padrões que se repetem</h3><p>Situações e relações que parecem sempre terminar no mesmo lugar.</p></div>
-      <div class="card"><h3>Ansiedade e pensamentos acelerados</h3><p>A mente que não desliga e o corpo que sente o peso disso.</p></div>
+      <div class="card"><h3>Angústia que não passa</h3><p>Uma inquietação constante, difícil de nomear, que atravessa seus dias.</p></div>
+      <div class="card"><h3>Padrões que se repetem</h3><p>Situações e relações que parecem sempre levar ao mesmo lugar.</p></div>
+      <div class="card"><h3>Ansiedade e pensamentos acelerados</h3><p>A mente que não desacelera e o corpo que carrega esse excesso.</p></div>
       <div class="card"><h3>Dificuldade nos relacionamentos</h3><p>Insegurança, medo de rejeição ou conflitos que se acumulam.</p></div>
-      <div class="card"><h3>Tristeza ou vazio</h3><p>A sensação de estar desconectado de si e do que antes fazia sentido.</p></div>
-      <div class="card"><h3>Decisões difíceis</h3><p>Encruzilhadas da vida em que é difícil escutar o que você realmente quer.</p></div>
+      <div class="card"><h3>Tristeza ou vazio</h3><p>Uma sensação de desconexão de si e daquilo que antes fazia sentido.</p></div>
+      <div class="card"><h3>Decisões difíceis</h3><p>Momentos da vida em que se torna difícil escutar o que você realmente quer.</p></div>
     </div>
     <p class="after">E mesmo tentando dar conta de tudo sozinho(a), <strong>algo continua pedindo escuta.</strong></p>
   </div>
@@ -359,10 +382,10 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
 <section class="section-sage">
   <div class="wrap">
     <span class="kicker">Como funciona</span>
-    <h2>Começar é mais simples do que parece</h2>
+    <h2>Começar pode ser mais simples do que parece</h2>
     <div class="steps">
       <div class="step"><h3>Primeiro contato</h3><p>Você me chama no WhatsApp, tira suas dúvidas e combinamos o melhor horário — presencial em Marília ou online, como preferir.</p></div>
-      <div class="step"><h3>Primeiras conversas</h3><p>Nas sessões iniciais, acolho a sua história e o que te trouxe até aqui, sem pressa e sem julgamentos.</p></div>
+      <div class="step"><h3>Primeiras conversas</h3><p>Nas sessões iniciais, acolho sua história e o que te trouxe até aqui, com tempo e sem julgamentos.</p></div>
       <div class="step"><h3>Seu processo, no seu ritmo</h3><p>Seguimos juntos em sessões regulares, construindo um espaço de escuta que respeita o seu tempo.</p></div>
     </div>
   </div>
@@ -377,7 +400,8 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
       <span class="kicker">Sobre mim</span>
       <h2>Olá, seja bem-vindo! Eu sou a Manoela.</h2>
       <p>Sou psicóloga clínica orientada pela <strong>Psicanálise</strong>, moro em Marília, interior do estado de São Paulo. Com formação contínua em Psicanálise e Psicopatologia, dedico-me a ajudar você a explorar suas emoções, compreender padrões e encontrar estratégias para lidar com os desafios da vida.</p>
-      <p>Atendo <strong>presencialmente em Marília</strong> e <strong>online para todo o Brasil</strong>, sempre pautada pela ética psicanalítica, com o compromisso de proporcionar um ambiente livre de julgamentos.</p>
+      <p>Atendo <strong>presencialmente em Marília</strong> e <strong>online em todos os lugares</strong>, mesmo à distância, de onde você estiver, é possível construir um espaço de escuta.
+Meu trabalho é pautado pela ética psicanalítica, com o compromisso de oferecer um espaço de escuta cuidadoso, acolhedor e livre de julgamentos.</p>
       <p><strong>Vamos iniciar essa jornada? Estou aqui para seguirmos juntos!</strong></p>
       <div class="tags">
         <span class="tag">Presencial em Marília</span>
@@ -390,6 +414,24 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
     </div>
   </div>
 </section>
+
+<!-- ⬇️ NOVA SEÇÃO: CONHEÇA O CONSULTÓRIO ⬇️ -->
+<section class="section-sage" id="consultorio">
+  <div class="wrap">
+    <span class="kicker">Um espaço para você</span>
+    <h2>Conheça meu local de atendimento</h2>
+    <p class="lead">Preparei um ambiente acolhedor, sigiloso e confortável no centro de Marília, pensado para que você se sinta à vontade durante suas sessões presenciais.</p>
+    
+    <div class="consultorio-galeria">
+      <!-- Foto 1: Visão geral com o divã -->
+      <img src="consultorio-1.jpg" alt="Visão geral do consultório acolhedor da psicóloga Manoela Floresti em Marília, com divã e poltrona cinza.">
+      
+      <!-- Foto 2: Visão frontal das poltronas de atendimento -->
+      <img src="consultorio-2.jpg" alt="Detalhe das duas poltronas confortáveis para atendimento presencial no consultório de Manoela Floresti.">
+    </div>
+  </div>
+</section>
+<!-- ⬆️ FIM DA NOVA SEÇÃO ⬆️ -->
 
 <section id="faq">
   <div class="wrap">
@@ -421,7 +463,7 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
   <div class="wrap">
     <span class="kicker">Onde me encontrar</span>
     <h2>Agende sua sessão presencial ou online</h2>
-    <p class="lead">Atendimento presencial no centro de Marília e online para todo o Brasil. Escolha o formato que fizer mais sentido para você.</p>
+    <p class="lead">Atendimento presencial no centro de Marília e online em todos os lugares. Escolha o formato que fizer mais sentido para você.</p>
     <div class="contato-grid">
       <div>
         <ul class="info-list">
@@ -492,7 +534,7 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
   <div class="wrap">
     <div class="social">
       <a href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2 1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
       </a>
       <a href="https://www.instagram.com/psimanoelafloresti/" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.3-.3.8-.3 1.8-.1 1.3-.1 1.6-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.5.4.8.7 1.1.3.3.6.5 1.1.7.3.1.8.3 1.8.3 1.3.1 1.6.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.3.3-.8.3-1.8.1-1.3.1-1.6.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.3-.1-.8-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg>
