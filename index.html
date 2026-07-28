@@ -49,6 +49,95 @@ header{
 .brand small{display:block;font-family:'Karla',sans-serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
 .nav .btn{padding:10px 20px;font-size:.9rem;white-space:nowrap}
 
+/* Botão do Menu Hambúrguer (Escondido no Desktop) REFINADO */
+.menu-toggle {
+  display: none;
+  background: var(--forest);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.menu-toggle:hover { background: var(--marigold); color: var(--forest); }
+.menu-toggle svg { 
+  width: 18px;
+  height: 18px;
+  fill: currentColor; 
+  display: block; 
+}
+
+/* Estrutura do Menu Mobile Overlay REFINADO */
+.mobile-menu {
+  position: fixed;
+  top: 0; right: 0;
+  width: 100%; height: 100vh;
+  background: var(--ivory);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-menu.active { transform: translateX(0); }
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(47,74,62,.06);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+/* X minimalista e sem fundo pesado */
+.menu-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--forest);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+.menu-close:hover { opacity: 0.7; }
+.menu-close svg { width: 24px; height: 24px; fill: currentColor; display: block; }
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* Links elegantes com a fonte Karla */
+.mobile-menu-links a {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.15rem;
+  color: var(--forest);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 12px 0;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(47,74,62,.04);
+  transition: color 0.2s;
+}
+.mobile-menu-links a:hover { color: var(--marigold); }
+
+/* Ajuste no botão de agendamento dentro do menu */
+.mobile-menu-links a.btn {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  margin-top: 24px;
+  border-bottom: none;
+}
+
 /* buttons */
 .btn{
   display:inline-flex;align-items:center;gap:9px;
@@ -176,24 +265,22 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:16px;max-width:22em}
   padding:7px 16px;border-radius:999px;
 }
 
-/* ⬇️ NOVA SEÇÃO DE ESTILOS PARA A GALERIA DE FOTOS ⬇️ */
+/* galeria consultório */
 .consultorio-galeria {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Duas colunas */
-  gap: 24px; /* Espaço entre as fotos */
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
   margin-top: 40px;
 }
-
 .consultorio-galeria img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4/3; /* Mantém a proporção das fotos padrão */
-  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-  border-radius: var(--radius); /* Usa o arredondamento padrão do seu site */
-  border: 1px solid rgba(47,74,62,.08); /* Borda suave como nos cards */
-  box-shadow: 0 10px 28px rgba(47,74,62,.12); /* Sombra suave */
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid rgba(47,74,62,.08);
+  box-shadow: 0 10px 28px rgba(47,74,62,.12);
 }
-/* ⬆️ FIM DOS NOVOS ESTILOS ⬆️ */
 
 /* contato + mapa */
 .contato-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:stretch}
@@ -258,7 +345,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:16px;max-width:22em}
 
 /* final cta */
 .final{text-align:center;padding:90px 0}
-.final h2{margin:0 auto 166px}
+.final h2{margin:0 auto 16px}
 .final p{max-width:34em;margin:0 auto 32px;color:var(--ink-soft)}
 .final .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
@@ -290,19 +377,19 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
   .photo-arch{order:-1}
   .cards,.steps{grid-template-columns:1fr}
   .offer-grid,.about-grid,.contato-grid{grid-template-columns:1fr}
-  
-  /* Ajuste para a galeria em tablets/celulares */
   .consultorio-galeria { grid-template-columns: 1fr; gap: 16px; }
-
   .about-photo{max-width:340px;margin:0 auto}
   section{padding:56px 0}
+
+  /* Mudanças no Header para Mobile */
+  .nav .btn { display: none; }
+  .menu-toggle { display: inline-flex; }
 }
 @media (max-width:560px){
   .wrap{padding:0 18px}
   .nav{gap:10px}
   .brand{font-size:1rem;line-height:1.25}
   .brand small{font-size:.62rem;letter-spacing:.08em}
-  .nav .btn{padding:9px 15px;font-size:.8rem}
   .hero{padding-bottom:48px}
   .photo-arch{width:min(300px,86%)}
   .photo-arch::before{width:74px;height:74px;inset:-8px -8px auto auto}
@@ -317,9 +404,34 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
 <header>
   <div class="wrap nav">
     <a class="brand" href="#inicio">Manoela Floresti<small>Psicóloga · CRP 06/165889</small></a>
+    
+    <!-- Botão Desktop -->
     <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">Agendar sessão</a>
+    
+    <!-- Botão do Menu Hambúrguer (Mobile) -->
+    <button class="menu-toggle" id="openMenu" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </button>
   </div>
 </header>
+
+<!-- Menu Mobile Estruturado -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <a class="brand" href="#inicio">Manoela Floresti<small>Psicóloga · CRP 06/165889</small></a>
+    <button class="menu-close" id="closeMenu" aria-label="Fechar menu">
+      <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-menu-links">
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre Mim</a>
+    <a href="#consultorio">Consultório</a>
+    <a href="#faq">Dúvidas</a>
+    <a href="#contato">Contato</a>
+    <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">Agendar sessão</a>
+  </nav>
+</div>
 
 <section class="hero" id="inicio">
   <div class="wrap">
@@ -373,7 +485,7 @@ footer .social svg{width:22px;height:22px;fill:var(--forest)}
     </div>
     <div class="offer-side">
       <h3>Sigilo, ética e acolhimento</h3>
-      <p>Os atendimentos são sempre pautados pela ética psicanalítica, em um ambiente livre de julgamentos, onde você pode se sentir à vontade para compartilhar suas questões mais profundas.</p>
+      <p>Os atendimentos são sempre pautados pela ética psicanalítica, in um ambiente livre de julgamentos, onde você pode se sentir à vontade para compartilhar suas questões mais profundas.</p>
       <a class="btn" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener">Agendar sessão</a>
     </div>
   </div>
@@ -415,7 +527,6 @@ Meu trabalho é pautado pela ética psicanalítica, com o compromisso de oferece
   </div>
 </section>
 
-<!-- ⬇️ NOVA SEÇÃO: CONHEÇA O CONSULTÓRIO ⬇️ -->
 <section class="section-sage" id="consultorio">
   <div class="wrap">
     <span class="kicker">Um espaço para você</span>
@@ -423,15 +534,11 @@ Meu trabalho é pautado pela ética psicanalítica, com o compromisso de oferece
     <p class="lead">Preparei um ambiente acolhedor, sigiloso e confortável no centro de Marília, pensado para que você se sinta à vontade durante suas sessões presenciais.</p>
     
     <div class="consultorio-galeria">
-      <!-- Foto 1: Visão geral com o divã -->
-      <img src="consultorio-1.jpg" alt="Visão geral do consultório acolhedor da psicóloga Manoela Floresti em Marília, com divã e poltrona cinza.">
-      
-      <!-- Foto 2: Visão frontal das poltronas de atendimento -->
-      <img src="consultorio-2.jpg" alt="Detalhe das duas poltronas confortáveis para atendimento presencial no consultório de Manoela Floresti.">
+      <img src="consultorio-1.jpg" alt="Visão geral do consultório acolhedor de Manoela Floresti">
+      <img src="consultorio-2.jpg" alt="Poltronas de atendimento do consultório">
     </div>
   </div>
 </section>
-<!-- ⬆️ FIM DA NOVA SEÇÃO ⬆️ -->
 
 <section id="faq">
   <div class="wrap">
@@ -547,6 +654,30 @@ Meu trabalho é pautado pela ética psicanalítica, com o compromisso de oferece
 <a class="wa-float" href="https://wa.me/5514991531484?text=Ol%C3%A1%20Manoela%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o!" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
 </a>
+
+<script>
+  const openMenuBtn = document.getElementById('openMenu');
+  const closeMenuBtn = document.getElementById('closeMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuLinks = document.querySelectorAll('.mobile-menu-links a');
+
+  openMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
 
 </body>
 </html>
