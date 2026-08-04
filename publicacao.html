@@ -93,7 +93,7 @@
     text-align: center;
   }
 
-  /* ESTILOS DE OUTRAS PUBLICAÇÕES */
+  /* ESTILOS DA SEÇÃO DE OUTRAS PUBLICAÇÕES */
   .related-posts {
     margin-top: 60px;
     padding-top: 40px;
@@ -107,13 +107,13 @@
   }
   .related-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
   }
   .related-card {
     background: var(--white);
     border-radius: 16px;
-    padding: 20px;
+    padding: 24px 20px;
     border: 1px solid rgba(47,74,62,.08);
     display: flex;
     flex-direction: column;
@@ -124,8 +124,8 @@
     font-family: 'Fraunces', serif;
     font-size: 1.05rem;
     color: var(--forest);
-    margin-bottom: 12px;
-    line-height: 1.3;
+    margin-bottom: 16px;
+    line-height: 1.35;
   }
   .related-card a {
     align-self: flex-start;
@@ -270,6 +270,7 @@
 </a>
 
 <script>
+  // Banco de dados dos posts
   const posts = {
     1: {
       title: "O que é Felicidade? Um Olhar Profundo Além das Superfícies",
@@ -294,45 +295,77 @@
       content: `<p>Viver com ansiedade é frequentemente descrito como a sensação constante de estar à beira de algo iminente. A mente antecipa cenários negativos, o corpo tensiona e a respiração se torna curta.</p>
                 <p>Na psicanálise, compreendemos a ansiedade como um sinal de que algo interno pede passagem — angústias não nomeadas ou medos que não ganharam palavras.</p>
                 <p>O processo analítico ajuda a desacelerar essa urgência, permitindo olhar para o que está acontecendo hoje e devolvendo o controle da própria história ao sujeito.</p>`
+    },
+    5: {
+      title: "O que é a Depressão? Além da tristeza e da falta de energia",
+      content: `<p>Na psicologia e na psicanálise, a depressão não se resume a um sentimento passageiro de tristeza ou ao desânimo momentâneo. Ela se caracteriza como um estado mais profundo de inibição do psiquismo, onde ocorre o esvaziamento do interesse pelo mundo externo e a perda da capacidade de investir afeto nas atividades diárias. O sujeito atravessa um cansaço persistente que não cessa com o repouso físico, acompanhado de sentimentos contínuos de desvalorização, culpa e desamparo.</p>
+                <p>Muitas vezes, a dor depressiva surge como uma resposta a perdas simbólicas ou reais que não puderam ser devidamente elaboradas, fazendo com que a energia psíquica se volte contra a própria pessoa. Diferente da tristeza comum — que possui um motivo claro e tende a se dissolver com o tempo —, a depressão paralisa e desorganiza o cotidiano. O acompanhamento terapêutico oferece um espaço seguro para investigar o que foi silenciado sob a apatia, auxiliando na restauração do sentido e no resgate do desejo de viver.</p>`
+    },
+    6: {
+      title: "Por que repetimos os mesmos erros nos relacionamentos?",
+      content: `<p>É comum percebermos a repetição de dinâmicas dolorosas ao longo de nossas vidas afetivas, como se estivéssemos revivendo a mesma história com pessoas diferentes. Na clínica psicanalítica, esse fenômeno é compreendido por meio do conceito de compulsão à repetição. O psiquismo humano tende a reencenar conflitos do passado e modelos relacionais aprendidos na infância, muitas vezes numa tentativa inconsciente de dar um desfecho diferente para antigas marcas e frustrações que não foram assimiladas.</p>
+                <p>Ao escolher parceiros com traços semelhantes ou reagir aos impasses sempre da mesma forma, o sujeito busca dominar uma dor antiga que permanece ativa no inconsciente. No entanto, sem a devida elaboração, essa busca resulta apenas na perpetuação do sofrimento e da insatisfação. A análise permite mapear a origem desses padrões inconscientes, interrompendo o ciclo de repetições automáticas para que escolhas mais conscientes, autênticas e maduras possam ser construídas nas relações do presente.</p>`
+    },
+    7: {
+      title: "Burnout e Esgotamento: Quando o corpo pede para parar",
+      content: `<p>A Síndrome de Burnout representa o ápice de um estresse crônico associado ao ambiente de trabalho ou às exigências contínuas de desempenho. Sob a perspectiva da saúde mental, o esgotamento profissional se manifesta através de uma tríade de sintomas: exaustão física e emocional extrema, despersonalização — caracterizada por atitudes de cinismo ou distanciamento afetivo — e uma queda acentuada no sentimento de realização pessoal. O sujeito passa a operar no limite de seus recursos psíquicos.</p>
+                <p>Frequentemente, o Burnout surge da dificuldade em reconhecer os próprios limites e da busca compulsiva por validação através da produtividade. Quando a mente tenta sustentar cobranças irrealistas e recusa as pausas necessárias, o corpo assume a sobrecarga por meio de dores, insônia e alteração de humor. O processo terapêutico é fundamental para desacelerar, reavaliar a relação com a rotina profissional e resgatar a capacidade de estabelecer limites saudáveis em defesa do próprio bem-estar.</p>`
+    },
+    8: {
+      title: "A arte de impor limites: Por que dizer 'não' é tão difícil?",
+      content: `<p>A dificuldade de dizer "não" e estabelecer limites nas relações interpessoais é uma das demandas mais frequentes na clínica psicológica. Essa incapacidade de negar pedidos geralmente está associada ao medo intenso da rejeição, do conflito ou do abandono. Para garantir a aprovação do outro e manter uma imagem de benevolência, a pessoa assume responsabilidades excessivas, anulando suas próprias necessidades e sobrecarregando sua estrutura psíquica com obrigações indesejadas.</p>
+                <p>Do ponto de vista psicanalítico, quem não consegue impor limites coloca o desejo do outro sempre à frente do seu, buscando uma validação externa para sustentar a própria autoimagem. O acúmulo contínuo de concessões gera ressentimento, ansiedade e uma perda progressiva da identidade. Trabalhar os limites em terapia não significa adotar uma postura egoísta, mas compreender que dizer "não" ao outro é, muitas vezes, um ato indispensável de preservação da própria saúde mental e de respeito à sua história.</p>`
+    },
+    9: {
+      title: "Luto e Separações: Como reorganizar a vida após uma perda?",
+      content: `<p>O luto é o processo psíquico fundamental de adaptação à perda de algo significativo, seja o falecimento de um ente querido, o término de um relacionamento ou o fim de uma etapa da vida. Trata-se de um trabalho doloroso e gradual no qual a energia afetiva depositada naquele vínculo precisa ser recolhida para ser reaplicada na realidade. Durante essa travessia, é comum vivenciar sentimentos flutuantes de tristeza, raiva, negação e desorientação em relação ao futuro.</p>
+                <p>A psicanálise ensina que não existe um tempo padronizado ou etapas rígidas para o término do luto, pois cada sujeito elabora o vazio à sua maneira. No entanto, tentar suprimir a dor ou apressar o reestabelecimento emocional pode levar ao represamento de conflitos não resolvidos. A terapia oferece um espaço analítico seguro para sustentar a escuta dessa ausência, permitindo dar novos significados à perda e reconstruir os caminhos do desejo no seu próprio ritmo.</p>`
+    },
+    10: {
+      title: "Quando a mente cala, o corpo fala: O que é a somatização?",
+      content: `<p>A somatização ocorre quando conflitos psíquicos, angústias e traumas não encontram vias de representação através da fala, passando a se manifestar no corpo por meio de sintomas físicos. É comum que dores tensionais, alterações gastrointestinais, enxaquecas e fadiga crônica surjam sem que haja qualquer alteração orgânica identificável em exames médicos. A dor do corpo, nesses casos, funciona como um recurso substitutivo para expressar um sofrimento emocional silenciado.</p>
+                <p>A psicanálise compreende que o aparelho psíquico, ao atingir o limite do suporte emocional sem conseguir traduzir em palavras o que sente, descarrega esse excesso de tensão no organismo. O sintoma somático é uma tentativa do corpo de denunciar que algo não vai bem. Na análise clínica, o objetivo é ajudar o paciente a nomear suas angústias e sentimentos, permitindo que o sofrimento ganhe expressão verbal e o corpo possa, finalmente, ser liberado dessa carga.</p>`
     }
   };
 
   const urlParams = new URLSearchParams(window.location.search);
-  const postId = urlParams.get('id');
+  let postId = urlParams.get('id');
 
-  if (postId && posts[postId]) {
-    const post = posts[postId];
-    document.getElementById('postTitle').innerText = post.title;
-    document.getElementById('postBody').innerHTML = post.content;
-    document.getElementById('pageTitle').innerText = `${post.title} — Manoela Floresti`;
-
-    const waLink = `https://wa.me/5514991531484?text=${encodeURIComponent('Olá Manoela, li o seu artigo "' + post.title + '" e gostaria de agendar uma consulta!')}`;
-    
-    document.getElementById('btnWhatsapp').href = waLink;
-    document.getElementById('btnWhatsappFinal').href = waLink;
-    document.getElementById('btnWhatsappSocial').href = waLink;
-    document.getElementById('waFloat').href = waLink;
-
-    // RENDERIZA OS OUTROS POSTS
-    const relatedGrid = document.getElementById('relatedGrid');
-    Object.keys(posts).forEach(id => {
-      if (id !== postId) {
-        const item = posts[id];
-        const cardHtml = `
-          <div class="related-card">
-            <h3>${item.title}</h3>
-            <a href="publicacao.html?id=${id}">Ler artigo →</a>
-          </div>
-        `;
-        relatedGrid.innerHTML += cardHtml;
-      }
-    });
-
-  } else {
-    document.getElementById('postTitle').innerText = "Publicação não encontrada";
-    document.getElementById('postBody').innerHTML = "<p>O artigo que você procura não está disponível.</p>";
-    document.querySelector('.related-posts').style.display = 'none';
+  // SE NÃO HOUVER ID NA URL (ACESSO DIRETO À PÁGINA), CARREGA O PRIMEIRO ARTIGO POR PADRÃO
+  if (!postId || !posts[postId]) {
+    postId = "1";
   }
+
+  const post = posts[postId];
+  document.getElementById('postTitle').innerText = post.title;
+  document.getElementById('postBody').innerHTML = post.content;
+  document.getElementById('pageTitle').innerText = `${post.title} — Manoela Floresti`;
+
+  // Atualiza links do WhatsApp
+  const waLink = `https://wa.me/5514991531484?text=${encodeURIComponent('Olá Manoela, li o seu artigo "' + post.title + '" e gostaria de agendar uma consulta!')}`;
+  
+  document.getElementById('btnWhatsapp').href = waLink;
+  document.getElementById('btnWhatsappFinal').href = waLink;
+  document.getElementById('btnWhatsappSocial').href = waLink;
+  document.getElementById('waFloat').href = waLink;
+
+  // RENDERIZA TODAS AS OUTRAS PUBLICAÇÕES
+  const relatedGrid = document.getElementById('relatedGrid');
+  
+  const otherPostIds = Object.keys(posts)
+    .filter(id => id !== postId)
+    .reverse();
+
+  otherPostIds.forEach(id => {
+    const item = posts[id];
+    const cardHtml = `
+      <div class="related-card">
+        <h3>${item.title}</h3>
+        <a href="publicacao.html?id=${id}">Ler artigo →</a>
+      </div>
+    `;
+    relatedGrid.innerHTML += cardHtml;
+  });
 </script>
 
 </body>
