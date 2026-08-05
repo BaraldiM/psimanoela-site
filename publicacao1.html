@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Publicação — Manoela Floresti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #FFFBF4;
+    --sage: #EAF1E6;
+    --forest: #253D33;
+    --marigold: #F3AD4D;
+    --ink: #35322C;
+    --ink-soft: #6B675E;
+    --white: #FFFFFF;
+    --radius: 22px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Karla', sans-serif;
+    background: var(--ivory);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+  header {
+    background: var(--white);
+    border-bottom: 1px solid rgba(47,74,62,.08);
+    padding: 16px 24px;
+  }
+  .wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    color: var(--forest);
+    text-decoration: none;
+  }
+  .brand small {
+    display: block;
+    font-family: 'Karla', sans-serif;
+    font-size: .7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--forest);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .article-container {
+    padding: 60px 0 40px;
+  }
+  .post-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 48px;
+    border: 1px solid rgba(47,74,62,.08);
+    box-shadow: 0 10px 30px rgba(47,74,62,.06);
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    color: var(--forest);
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin-bottom: 24px;
+  }
+  .post-content p {
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+  }
+  .cta-box {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(47,74,62,.1);
+    text-align: center;
+  }
+
+  /* ESTILOS DA SEÇÃO DE OUTRAS PUBLICAÇÕES */
+  .related-posts {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(47,74,62,.1);
+  }
+  .related-posts h2 {
+    font-family: 'Fraunces', serif;
+    color: var(--forest);
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .related-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid rgba(47,74,62,.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(47,74,62,.04);
+  }
+  .related-card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    color: var(--forest);
+    margin-bottom: 16px;
+    line-height: 1.35;
+  }
+  .related-card a {
+    align-self: flex-start;
+    color: var(--forest);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    background: var(--sage);
+    padding: 8px 16px;
+    border-radius: 999px;
+    transition: background 0.2s;
+  }
+  .related-card a:hover {
+    background: var(--marigold);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--marigold);
+    color: var(--forest);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 999px;
+    transition: transform .15s ease, box-shadow .15s ease;
+    box-shadow: 0 4px 14px rgba(240,165,66,.35);
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(240,165,66,.45); }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  .btn.ghost {
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid var(--forest);
+    color: var(--forest);
+  }
+  .btn.ghost:hover { background: var(--forest); color: var(--ivory); }
+
+  .final { text-align: center; padding: 60px 0; }
+  .final h2 { font-family: 'Fraunces', serif; color: var(--forest); font-size: clamp(1.7rem, 3.4vw, 2.4rem); margin: 0 auto 16px; }
+  .final p { max-width: 34em; margin: 0 auto 32px; color: var(--ink-soft); }
+  .final .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  footer { background: var(--sage); padding: 40px 0 60px; text-align: center; font-size: .9rem; color: var(--ink-soft); }
+  footer a { color: var(--forest); font-weight: 700; text-decoration: none; }
+  footer .social { display: flex; gap: 18px; justify-content: center; margin-bottom: 14px; }
+  footer .social a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--white); box-shadow: 0 4px 12px rgba(47,74,62,.1); }
+  footer .social svg { width: 22px; height: 22px; fill: var(--forest); }
+
+  .aviso-crise {
+    background: var(--white);
+    border: 1px solid rgba(47, 74, 62, 0.12);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    max-width: 820px;
+    margin: 0 auto 32px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(47,74,62,.04);
+  }
+  .aviso-crise i { font-style: italic; }
+
+  .wa-float {
+    position: fixed; right: 22px; bottom: 22px; z-index: 60;
+    width: 58px; height: 58px; border-radius: 50%;
+    background: #25D366; display: grid; place-items: center;
+    box-shadow: 0 8px 22px rgba(37,211,102,.45);
+    transition: transform .15s ease;
+  }
+  .wa-float:hover { transform: scale(1.08); }
+  .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+
+  @media (max-width: 600px) {
+    .post-card { padding: 24px; }
+    h1 { font-size: 1.6rem; }
+    .final .cta-row .btn { width: 100%; justify-content: center; }
+    .wa-float { right: 16px; bottom: 16px; width: 54px; height: 54px; }
+    .aviso-crise { padding: 16px 20px; font-size: .84rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-content">
+    <a class="brand" href="index.html">Manoela Floresti<small>Psicóloga · CRP 06/165889</small></a>
+    <a href="index.html#blog" class="btn-voltar">← Voltar</a>
+  </div>
+</header>
+
+<main class="wrap article-container">
+  <article class="post-card">
+    <h1 id="postTitle">Carregando...</h1>
+    <div id="postBody" class="post-content"></div>
+    
+    <div class="cta-box">
+      <a id="btnWhatsapp" class="btn" href="#" target="_blank" rel="noopener">Agendar uma consulta</a>
+    </div>
+  </article>
+
+  <!-- SEÇÃO DE OUTRAS PUBLICAÇÕES -->
+  <section class="related-posts">
+    <h2>Outras Publicações</h2>
+    <div id="relatedGrid" class="related-grid"></div>
+  </section>
+</main>
+
+<section class="final">
+  <div class="wrap">
+    <div class="cta-row">
+      <a id="btnWhatsappFinal" class="btn" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a class="btn ghost" href="https://www.instagram.com/psimanoelafloresti/" target="_blank" rel="noopener">Me acompanhe no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="aviso-crise">
+      Atenção: Se você estiver em crise, com ideação ou planejamento suicida, ligue para o <i>Centro de Valorização da Vida - CVV (188)</i>. Em caso de emergência, procure o hospital mais próximo. Havendo risco de morte, ligue imediatamente para o <i>SAMU (192)</i>, ou para o <i>Corpo de Bombeiros (193)</i>.
+    </div>
+    <div class="social">
+      <a id="btnWhatsappSocial" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/psimanoelafloresti/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm5.838-10.615a1.44 1.44 0 10-2.88 0 1.44 1.44 0 002.88 0z"/></svg>
+      </a>
+    </div>
+    <p>©2026 Manoela Floresti · Psicóloga · CRP 06/165889<br>R. Bahia, 165 — Sala 14, Centro, Marília-SP · Atendimento presencial e online</p>
+  </div>
+</footer>
+
+<a id="waFloat" class="wa-float" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4zM12 22a10 10 0 0 1-5.1-1.4L2 22l1.4-4.7A10 10 0 1 1 12 22z"/></svg>
+</a>
+
+<script>
+  // Banco de dados dos posts
+  const posts = {
+    1: {
+      title: "O que é Felicidade? Um Olhar Profundo Além das Superfícies",
+      content: `<p>Muitas vezes a sociedade moderna nos pressiona a buscar a felicidade como se ela fosse um estado permanente de euforia e bem-estar. No entanto, sob a ótica da psicanálise, essa busca incessante pode se tornar a própria fonte do sofrimento.</p>
+                <p>A verdadeira satisfação não está em eliminar todos os conflitos ou alegar estar 'bem' 100% do tempo, mas sim na capacidade de sustentar o próprio desejo, encarar os altos e baixos da vida com autenticidade e construir significados próprios para sua existência.</p>
+                <p>Ao dar espaço para suas dores em vez de tentar escondê-las, abre-se a possibilidade de vivenciar momentos de paz muito mais reais e profundos.</p>`
+    },
+    2: {
+      title: "Tristeza ou Depressão? Como diferenciar",
+      content: `<p>A tristeza é uma emoção natural do ser humano. Sentimos tristeza diante de perdas, frustrações ou mudanças importantes na vida. Ela tem um motivo, um início e, com o tempo e acolhimento, tende a diminuir gradualmente.</p>
+                <p>Já a depressão vai além do sentimento de tristeza. Trata-se de um quadro mais persistente que afeta o corpo, a energia, a capacidade de sentir prazer nas coisas que antes fazia sentido e até a percepção de si mesmo.</p>
+                <p>Se a sensação de esvaziamento e o cansaço constante parecem não ter fim, a terapia oferece um espaço fundamental para investigar as origens dessa dor e reconstruir caminhos de alívio.</p>`
+    },
+    3: {
+      title: "Quando um Relacionamento se Torna Abusivo: Sinais, Reflexões e ... Caminho para a Liberdade",
+      content: `<p>Relacionamentos abusivos nem sempre se manifestam por meio de agressões físicas explícitas. Muitas vezes, eles se iniciam de forma sutil, através de dinâmicas de controle, isolamento progressivo e chantagens emocionais.</p>
+                <p>Pequenos comportamentos como desvalorizar suas conquistas, fazer você duvidar da sua própria memória ou sentimentos (gaslighting) e exigir justificativas constantes são sinais de alerta importantes.</p>
+                <p>Identificar essas dinâmicas pode ser um processo difícil, pois envolve laços afetivos profundos. A análise oferece o suporte necessário para fortalecer sua autonomia e resgatar seus limites.</p>`
+    },
+    4: {
+      title: "Ansiedade: O excesso do futuro no presente",
+      content: `<p>Viver com ansiedade é frequentemente descrito como a sensação constante de estar à beira de algo iminente. A mente antecipa cenários negativos, o corpo tensiona e a respiração se torna curta.</p>
+                <p>Na psicanálise, compreendemos a ansiedade como um sinal de que algo interno pede passagem — angústias não nomeadas ou medos que não ganharam palavras.</p>
+                <p>O processo analítico ajuda a desacelerar essa urgência, permitindo olhar para o que está acontecendo hoje e devolvendo o controle da própria história ao sujeito.</p>`
+    },
+    5: {
+      title: "O que é a Depressão? Além da tristeza e da falta de energia",
+      content: `<p>Na psicologia e na psicanálise, a depressão não se resume a um sentimento passageiro de tristeza ou ao desânimo momentâneo. Ela se caracteriza como um estado mais profundo de inibição do psiquismo, onde ocorre o esvaziamento do interesse pelo mundo externo e a perda da capacidade de investir afeto nas atividades diárias. O sujeito atravessa um cansaço persistente que não cessa com o repouso físico, acompanhado de sentimentos contínuos de desvalorização, culpa e desamparo.</p>
+                <p>Muitas vezes, a dor depressiva surge como uma resposta a perdas simbólicas ou reais que não puderam ser devidamente elaboradas, fazendo com que a energia psíquica se volte contra a própria pessoa. Diferente da tristeza comum — que possui um motivo claro e tende a se dissolver com o tempo —, a depressão paralisa e desorganiza o cotidiano. O acompanhamento terapêutico oferece um espaço seguro para investigar o que foi silenciado sob a apatia, auxiliando na restauração do sentido e no resgate do desejo de viver.</p>`
+    },
+    6: {
+      title: "Por que repetimos os mesmos erros nos relacionamentos?",
+      content: `<p>É comum percebermos a repetição de dinâmicas dolorosas ao longo de nossas vidas afetivas, como se estivéssemos revivendo a mesma história com pessoas diferentes. Na clínica psicanalítica, esse fenômeno é compreendido por meio do conceito de compulsão à repetição. O psiquismo humano tende a reencenar conflitos do passado e modelos relacionais aprendidos na infância, muitas vezes numa tentativa inconsciente de dar um desfecho diferente para antigas marcas e frustrações que não foram assimiladas.</p>
+                <p>Ao escolher parceiros com traços semelhantes ou reagir aos impasses sempre da mesma forma, o sujeito busca dominar uma dor antiga que permanece ativa no inconsciente. No entanto, sem a devida elaboração, essa busca resulta apenas na perpetuação do sofrimento e da insatisfação. A análise permite mapear a origem desses padrões inconscientes, interrompendo o ciclo de repetições automáticas para que escolhas mais conscientes, autênticas e maduras possam ser construídas nas relações do presente.</p>`
+    },
+    7: {
+      title: "Burnout e Esgotamento: Quando o corpo pede para parar",
+      content: `<p>A Síndrome de Burnout representa o ápice de um estresse crônico associado ao ambiente de trabalho ou às exigências contínuas de desempenho. Sob a perspectiva da saúde mental, o esgotamento profissional se manifesta através de uma tríade de sintomas: exaustão física e emocional extrema, despersonalização — caracterizada por atitudes de cinismo ou distanciamento afetivo — e uma queda acentuada no sentimento de realização pessoal. O sujeito passa a operar no limite de seus recursos psíquicos.</p>
+                <p>Frequentemente, o Burnout surge da dificuldade em reconhecer os próprios limites e da busca compulsiva por validação através da produtividade. Quando a mente tenta sustentar cobranças irrealistas e recusa as pausas necessárias, o corpo assume a sobrecarga por meio de dores, insônia e alteração de humor. O processo terapêutico é fundamental para desacelerar, reavaliar a relação com a rotina profissional e resgatar a capacidade de estabelecer limites saudáveis em defesa do próprio bem-estar.</p>`
+    },
+    8: {
+      title: "A arte de impor limites: Por que dizer 'não' é tão difícil?",
+      content: `<p>A dificuldade de dizer "não" e estabelecer limites nas relações interpessoais é uma das demandas mais frequentes na clínica psicológica. Essa incapacidade de negar pedidos geralmente está associada ao medo intenso da rejeição, do conflito ou do abandono. Para garantir a aprovação do outro e manter uma imagem de benevolência, a pessoa assume responsabilidades excessivas, anulando suas próprias necessidades e sobrecarregando sua estrutura psíquica com obrigações indesejadas.</p>
+                <p>Do ponto de vista psicanalítico, quem não consegue impor limites coloca o desejo do outro sempre à frente do seu, buscando uma validação externa para sustentar a própria autoimagem. O acúmulo contínuo de concessões gera ressentimento, ansiedade e uma perda progressiva da identidade. Trabalhar os limites em terapia não significa adotar uma postura egoísta, mas compreender que dizer "não" ao outro é, muitas vezes, um ato indispensável de preservação da própria saúde mental e de respeito à sua história.</p>`
+    },
+    9: {
+      title: "Luto e Separações: Como reorganizar a vida após uma perda?",
+      content: `<p>O luto é o processo psíquico fundamental de adaptação à perda de algo significativo, seja o falecimento de um ente querido, o término de um relacionamento ou o fim de uma etapa da vida. Trata-se de um trabalho doloroso e gradual no qual a energia afetiva depositada naquele vínculo precisa ser recolhida para ser reaplicada na realidade. Durante essa travessia, é comum vivenciar sentimentos flutuantes de tristeza, raiva, negação e desorientação em relação ao futuro.</p>
+                <p>A psicanálise ensina que não existe um tempo padronizado ou etapas rígidas para o término do luto, pois cada sujeito elabora o vazio à sua maneira. No entanto, tentar suprimir a dor ou apressar o reestabelecimento emocional pode levar ao represamento de conflitos não resolvidos. A terapia oferece um espaço analítico seguro para sustentar a escuta dessa ausência, permitindo dar novos significados à perda e reconstruir os caminhos do desejo no seu próprio ritmo.</p>`
+    },
+    10: {
+      title: "Quando a mente cala, o corpo fala: O que é a somatização?",
+      content: `<p>A somatização ocorre quando conflitos psíquicos, angústias e traumas não encontram vias de representação através da fala, passando a se manifestar no corpo por meio de sintomas físicos. É comum que dores tensionais, alterações gastrointestinais, enxaquecas e fadiga crônica surjam sem que haja qualquer alteração orgânica identificável em exames médicos. A dor do corpo, nesses casos, funciona como um recurso substitutivo para expressar um sofrimento emocional silenciado.</p>
+                <p>A psicanálise compreende que o aparelho psíquico, ao atingir o limite do suporte emocional sem conseguir traduzir em palavras o que sente, descarrega esse excesso de tensão no organismo. O sintoma somático é uma tentativa do corpo de denunciar que algo não vai bem. Na análise clínica, o objetivo é ajudar o paciente a nomear suas angústias e sentimentos, permitindo que o sofrimento ganhe expressão verbal e o corpo possa, finalmente, ser liberado dessa carga.</p>`
+    }
+  };
+
+  const urlParams = new URLSearchParams(window.location.search);
+  let postId = urlParams.get('id');
+
+  // SE NÃO HOUVER ID NA URL (ACESSO DIRETO À PÁGINA), CARREGA O PRIMEIRO ARTIGO POR PADRÃO
+  if (!postId || !posts[postId]) {
+    postId = "1";
+  }
+
+  const post = posts[postId];
+  document.getElementById('postTitle').innerText = post.title;
+  document.getElementById('postBody').innerHTML = post.content;
+  document.getElementById('pageTitle').innerText = `${post.title} — Manoela Floresti`;
+
+  // Atualiza links do WhatsApp
+  const waLink = `https://wa.me/5514991531484?text=${encodeURIComponent('Olá Manoela, li o seu artigo "' + post.title + '" e gostaria de agendar uma consulta!')}`;
+  
+  document.getElementById('btnWhatsapp').href = waLink;
+  document.getElementById('btnWhatsappFinal').href = waLink;
+  document.getElementById('btnWhatsappSocial').href = waLink;
+  document.getElementById('waFloat').href = waLink;
+
+  // RENDERIZA TODAS AS OUTRAS PUBLICAÇÕES
+  const relatedGrid = document.getElementById('relatedGrid');
+  
+  const otherPostIds = Object.keys(posts)
+    .filter(id => id !== postId)
+    .reverse();
+
+  otherPostIds.forEach(id => {
+    const item = posts[id];
+    const cardHtml = `
+      <div class="related-card">
+        <h3>${item.title}</h3>
+        <a href="publicacao.html?id=${id}">Ler artigo →</a>
+      </div>
+    `;
+    relatedGrid.innerHTML += cardHtml;
+  });
+</script>
+
+</body>
+</html>
